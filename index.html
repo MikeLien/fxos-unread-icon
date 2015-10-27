@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-Mike says hello.
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>Extensions</title>
+    <meta name="viewport" content="initial-scale=1">
+
+    <script>
+
+function install(url) {
+  console.log('About to load from https://shakoho.github.io/' + url);
+  navigator.mozApps.installPackage('https://mikelien.github.io/' + url);
+}
+    </script>
+  </head>
+
+  <body>
+
+    <h1>Extension installation.</h1>
+    <button onclick="install('fxos-unread-icon/update.webapp')">Install Unread Icon Add-on</button>
+
+  </body>
 </html>
+
